@@ -91,6 +91,7 @@ func benchURL(client http.Client, url string, count int, urlStats *URLStatistic)
 	urlStats.total = time.Since(start).Nanoseconds()
 	urlStats.url = url
 	urlStats.count = count
+	urlStats.responseStats = responseStats
 	gatherURLStatistic(responseStats, urlStats)
 }
 
